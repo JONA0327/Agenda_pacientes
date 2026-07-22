@@ -1,0 +1,21 @@
+@import './auth.css';
+@import './sidebar.css';
+@import './calendar.css';
+@import './agenda.css';
+@import './dashboard.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] { display: none !important; }
+
+body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+    font-family: 'Figtree', system-ui, -apple-system, sans-serif;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { @apply bg-transparent; }
+::-webkit-scrollbar-thumb { @apply bg-slate-200 rounded-full; }
+::-webkit-scrollbar-thumb:hover { @apply bg-slate-300; }

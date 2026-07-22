@@ -1,0 +1,38 @@
+@layer components {
+  .dash-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6;
+  }
+  .dash-grid {
+    @apply grid grid-cols-1 lg:grid-cols-12 gap-6;
+  }
+  .dash-calendar-col {
+    @apply lg:col-span-5;
+  }
+  .dash-agenda-col {
+    @apply lg:col-span-7;
+  }
+  .dash-welcome {
+    @apply mb-6;
+  }
+  .dash-welcome h1 {
+    @apply text-2xl font-bold text-slate-800;
+  }
+  .dash-welcome p {
+    @apply text-sm text-slate-500 mt-1;
+  }
+  .dash-stats {
+    @apply grid grid-cols-3 gap-4 mb-6;
+  }
+  .dash-stat-card {
+    @apply bg-white rounded-xl border border-slate-200 p-4 shadow-sm;
+  }
+  .dash-stat-value {
+    @apply text-2xl font-bold text-slate-800;
+  }
+  .dash-stat-label {
+    @apply text-xs text-slate-500 mt-1;
+  }
+  .dash-stat-icon {
+    @apply w-8 h-8 rounded-lg flex items-center justify-center;
+  }
+}

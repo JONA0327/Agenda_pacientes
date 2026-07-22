@@ -1,0 +1,69 @@
+@layer components {
+  .sidebar {
+    @apply fixed top-0 left-0 h-full bg-white border-r border-slate-200 
+           shadow-lg z-40 transition-all duration-300 ease-in-out;
+    width: 260px;
+  }
+  .sidebar.collapsed {
+    width: 0;
+    overflow: hidden;
+    border-right: none;
+  }
+  .sidebar-overlay {
+    @apply fixed inset-0 bg-slate-900/50 z-30 transition-opacity duration-300;
+  }
+  .sidebar-overlay.hidden {
+    @apply opacity-0 pointer-events-none;
+  }
+  .sidebar-header {
+    @apply flex items-center justify-between px-5 h-16 border-b border-slate-100;
+  }
+  .sidebar-brand {
+    @apply text-lg font-bold bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent;
+  }
+  .sidebar-close {
+    @apply p-2 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 
+           transition-colors duration-200;
+  }
+  .sidebar-menu {
+    @apply px-3 py-4 space-y-1;
+  }
+  .sidebar-item {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium 
+           text-slate-600 hover:text-cyan-700 hover:bg-cyan-50 
+           transition-all duration-200 cursor-pointer;
+  }
+  .sidebar-item.active {
+    @apply text-cyan-700 bg-cyan-50;
+  }
+  .sidebar-item-icon {
+    @apply w-5 h-5 shrink-0;
+  }
+  .sidebar-divider {
+    @apply my-3 mx-4 border-t border-slate-100;
+  }
+  .sidebar-footer {
+    @apply absolute bottom-0 left-0 right-0 p-4 border-t border-slate-100;
+  }
+  .sidebar-toggle-btn {
+    @apply fixed z-50 bg-white text-slate-500
+           hover:text-cyan-600 hover:bg-cyan-50;
+    top: 120px;
+    left: 0;
+    padding: 14px 10px 14px 6px;
+    border-radius: 0 20px 20px 0;
+    border: 1px solid theme('colors.slate.200');
+    border-left: none;
+    box-shadow: 4px 2px 12px rgba(0, 0, 0, 0.08);
+    transition: left 0.3s ease, color 0.15s, background-color 0.15s;
+  }
+  .sidebar-toggle-btn.shifted {
+    left: 260px;
+  }
+  .main-content {
+    @apply transition-all duration-300 ease-in-out ml-0;
+  }
+  .main-content.shifted {
+    margin-left: 260px;
+  }
+}

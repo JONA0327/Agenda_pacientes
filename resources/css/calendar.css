@@ -1,0 +1,63 @@
+@layer components {
+  .cal-card {
+    @apply bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden;
+  }
+  .cal-header {
+    @apply flex items-center justify-between px-5 py-4 border-b border-slate-100;
+  }
+  .cal-title {
+    @apply text-base font-semibold text-slate-800;
+  }
+  .cal-nav-btn {
+    @apply p-2 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 
+           transition-colors duration-200;
+  }
+  .cal-grid {
+    @apply grid grid-cols-7 gap-px bg-slate-100;
+  }
+  .cal-day-header {
+    @apply bg-slate-50 px-2 py-2.5 text-center text-xs font-semibold text-slate-500 uppercase tracking-wider;
+  }
+  .cal-day {
+    @apply bg-white px-2 py-2.5 text-center text-sm text-slate-700 
+           hover:bg-cyan-50 cursor-pointer transition-colors duration-150
+           relative min-h-[40px];
+  }
+  .cal-day.other-month {
+    @apply text-slate-300;
+  }
+  .cal-day.today {
+    @apply bg-cyan-50 font-semibold text-cyan-700;
+  }
+  .cal-day.today::after {
+    content: '';
+    @apply absolute bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 
+           rounded-full bg-cyan-500;
+  }
+  .cal-day.selected {
+    @apply bg-cyan-500 text-white font-semibold;
+  }
+  .cal-day.selected::after {
+    content: '';
+    @apply absolute bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 
+           rounded-full bg-white;
+  }
+  .cal-day.has-appointments {
+    @apply font-medium;
+  }
+  .cal-day.has-appointments::after {
+    content: '';
+    @apply absolute bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 
+           rounded-full bg-emerald-400;
+  }
+  .cal-day.selected.has-appointments::after {
+    @apply bg-white;
+  }
+  .cal-badge {
+    @apply text-xs font-medium px-2 py-0.5 rounded-full;
+  }
+  .cal-badge-count {
+    @apply absolute top-1 right-1 w-4 h-4 bg-emerald-500 text-white 
+           text-[9px] font-bold rounded-full flex items-center justify-center;
+  }
+}
